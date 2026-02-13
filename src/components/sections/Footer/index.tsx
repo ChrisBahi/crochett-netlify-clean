@@ -1,10 +1,13 @@
 import * as React from 'react';
 import Markdown from 'markdown-to-jsx';
 import classNames from 'classnames';
+import { useRouter } from 'next/router';
 
 import { mapStylesToClassNames as mapStyles } from '../../../utils/map-styles-to-class-names';
 import { Social, Action, Link } from '../../atoms';
 import ImageBlock from '../../blocks/ImageBlock';
+
+const SUPPORTED_LOCALES = ['fr', 'en', 'es', 'it', 'de', 'nl'];
 
 export default function Footer(props) {
     const {
@@ -84,18 +87,58 @@ export default function Footer(props) {
                             </ul>
                         )}
                         {copyrightText && (
-                            <Markdown
-                                options={{ forceInline: true, forceWrapper: true, wrapper: 'p' }}
-                                className={classNames('sb-markdown', 'text-sm', 'mb-4', { 'sm:order-first sm:mr-12': legalLinks.length > 0 })}
-                                {...(enableAnnotations && { 'data-sb-field-path': 'copyrightText' })}
-                            >
-                                {copyrightText}
-                            </Markdown>
+                            <div className={classNames('mb-4', { 'sm:order-first sm:mr-12': legalLinks.length > 0 })}>
+                                <Markdown
+                                    options={{ forceInline: true, forceWrapper: true, wrapper: 'p' }}
+                                    className={classNames('sb-markdown', 'text-sm')}
+                                    {...(enableAnnotations && { 'data-sb-field-path': 'copyrightText' })}
+                                >
+                                    {copyrightText}
+                                </Markdown>
+                                <LanguageSelector />
+                            </div>
                         )}
                     </div>
                 )}
             </div>
         </footer>
+    );
+}
+
+function LanguageSelector() {
+    const router = useRouter();
+    const asPath = router.asPath || '/';
+    const firstSegment = asPath.split('?')[0].split('#')[0].split('/').filter(Boolean)[0] || '';
+    const currentLocale = SUPPORTED_LOCALES.includes(firstSegment) ? firstSegment : 'fr';
+
+    const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        const nextLocale = event.target.value;
+        const cleanPath = asPath.split('?')[0].split('#')[0] || '/';
+        const parts = cleanPath.split('/').filter(Boolean);
+        const restParts = SUPPORTED_LOCALES.includes(parts[0]) ? parts.slice(1) : parts;
+        const nextPath = `/${nextLocale}${restParts.length ? `/${restParts.join('/')}` : ''}`;
+        router.push(nextPath);
+    };
+
+    return (
+        <div className="mt-3">
+            <label className="text-xs uppercase tracking-wide opacity-80" htmlFor="footer-language">
+                Langue
+            </label>
+            <select
+                id="footer-language"
+                value={currentLocale}
+                onChange={handleChange}
+                className="block mt-2 text-sm bg-transparent border border-current/40 rounded px-3 py-2"
+            >
+                <option value="fr">Francais</option>
+                <option value="en">English</option>
+                <option value="es">Espanol</option>
+                <option value="it">Italiano</option>
+                <option value="de">Deutsch</option>
+                <option value="nl">Nederlands</option>
+            </select>
+        </div>
     );
 }
 
