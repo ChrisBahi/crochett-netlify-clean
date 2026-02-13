@@ -1,0 +1,109 @@
+{
+    "logo": {
+        "url": "/images/logo-white.svg",
+        "altText": "Logo light",
+        "type": "ImageBlock"
+    },
+    "text": "crochett.ai - Plateforme de production de contenus et automatisation sociale.",
+    "primaryLinks": {
+        "title": "Site",
+        "links": [
+            {
+                "label": "Accueil",
+                "altText": "Features page",
+                "url": "/",
+                "icon": "arrowRight",
+                "iconPosition": "right",
+                "style": "secondary",
+                "type": "Link"
+            },
+            {
+                "label": "Pricing",
+                "url": "/pricing",
+                "icon": "arrowRight",
+                "iconPosition": "right",
+                "style": "secondary",
+                "type": "Link"
+            },
+            {
+                "label": "Social",
+                "url": "/social",
+                "icon": "arrowRight",
+                "iconPosition": "right",
+                "style": "secondary",
+                "type": "Link"
+            }
+        ],
+        "type": "FooterLinksGroup"
+    },
+    "secondaryLinks": {
+        "title": "Entreprise",
+        "links": [
+            {
+                "label": "News",
+                "altText": "news page",
+                "url": "/news",
+                "icon": "arrowRight",
+                "iconPosition": "right",
+                "style": "secondary",
+                "type": "Link"
+            },
+            {
+                "label": "Formulaire",
+                "url": "/formulaire",
+                "icon": "arrowRight",
+                "iconPosition": "right",
+                "style": "secondary",
+                "type": "Link"
+            }
+        ],
+        "type": "FooterLinksGroup"
+    },
+    "socialLinks": [
+        {
+            "altText": "crochett.ai",
+            "url": "https://crochett.ai",
+            "icon": "github",
+            "type": "Social"
+        },
+        {
+            "altText": "Social page",
+            "url": "https://crochett.ai/social",
+            "icon": "twitter",
+            "type": "Social"
+        },
+        {
+            "altText": "LinkedIn",
+            "url": "https://www.linkedin.com/company/crochett-ai",
+            "icon": "linkedin",
+            "type": "Social"
+        },
+        {
+            "altText": "Email",
+            "url": "mailto:b@crochett.ai",
+            "icon": "mail",
+            "type": "Social"
+        }
+    ],
+    "legalLinks": [
+        {
+            "label": "Mentions legales",
+            "url": "/legal",
+            "icon": "arrowRight",
+            "iconPosition": "right",
+            "style": "secondary",
+            "type": "Link"
+        },
+        {
+            "label": "Confidentialite",
+            "url": "/legal",
+            "icon": "arrowRight",
+            "iconPosition": "right",
+            "style": "secondary",
+            "type": "Link"
+        }
+    ],
+    "copyrightText": "Copyright 2026 crochett.ai",
+    "colors": "bg-dark-fg-light",
+    "type": "Footer"
+}
