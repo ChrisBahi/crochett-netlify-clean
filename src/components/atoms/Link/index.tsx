@@ -9,6 +9,7 @@ function withLocalePrefix(href: string, localePrefix: string) {
     if (!href.startsWith('/')) return href;
     if (href.startsWith('//')) return href;
     if (href.startsWith('/api')) return href;
+    if (SUPPORTED_LOCALES.some((locale) => href === `/${locale}` || href.startsWith(`/${locale}/`))) return href;
     if (href === localePrefix || href.startsWith(`${localePrefix}/`)) return href;
     if (href === '/') return localePrefix;
     return `${localePrefix}${href}`;

@@ -39,8 +39,16 @@
     ],
     "secondaryLinks": [
         {
-            "label": "GET STARTED",
-            "url": "/formulaire",
+            "label": "Sign up",
+            "url": "/fr",
+            "icon": "arrowRight",
+            "iconPosition": "right",
+            "style": "secondary",
+            "type": "Button"
+        },
+        {
+            "label": "Log in",
+            "url": "/en",
             "icon": "arrowRight",
             "iconPosition": "right",
             "style": "primary",

@@ -86,26 +86,25 @@ export default function FormPage({ lang = 'fr' }) {
                     padding: 24px;
                     display: grid;
                     place-items: center;
-                    background: radial-gradient(circle at 0% 0%, #d1fae5 0%, transparent 40%),
-                        radial-gradient(circle at 100% 100%, #fef3c7 0%, transparent 35%), #f4f1ea;
+                    background: #c9c9c9;
                 }
                 .card {
                     width: min(760px, 100%);
-                    background: #fffdf8;
-                    border: 1px solid #d6d3d1;
-                    border-radius: 16px;
-                    padding: 28px;
-                    box-shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
+                    background: #f5f3ef;
+                    border: 1px solid #d3cec7;
+                    border-radius: 10px;
+                    padding: 28px 30px;
+                    box-shadow: 0 8px 24px rgba(27, 27, 27, 0.16);
                 }
                 h1 {
                     margin: 0 0 8px;
                     font-size: clamp(1.6rem, 4vw, 2.1rem);
                     line-height: 1.15;
-                    color: #1f2937;
+                    color: #4b4a48;
                 }
                 .subtitle {
                     margin: 0 0 24px;
-                    color: #6b7280;
+                    color: #656260;
                 }
                 form {
                     display: grid;
@@ -125,18 +124,18 @@ export default function FormPage({ lang = 'fr' }) {
                     display: block;
                     margin-bottom: 6px;
                     font-weight: 600;
-                    color: #1f2937;
+                    color: #4b4a48;
                 }
                 input,
                 select,
                 textarea,
                 button {
                     width: 100%;
-                    border-radius: 10px;
-                    border: 1px solid #d6d3d1;
+                    border-radius: 6px;
+                    border: 1px solid #cfcac3;
                     padding: 11px 12px;
                     font: inherit;
-                    background: #fff;
+                    background: #fbfaf8;
                 }
                 textarea {
                     min-height: 130px;
@@ -149,7 +148,7 @@ export default function FormPage({ lang = 'fr' }) {
                     display: flex;
                     gap: 10px;
                     align-items: flex-start;
-                    color: #6b7280;
+                    color: #656260;
                     font-weight: 500;
                 }
                 .consent input {
@@ -159,7 +158,7 @@ export default function FormPage({ lang = 'fr' }) {
                 }
                 button {
                     border: 0;
-                    background: #0f766e;
+                    background: #2f2f31;
                     color: #fff;
                     font-weight: 700;
                     margin-top: 4px;
@@ -168,10 +167,10 @@ export default function FormPage({ lang = 'fr' }) {
                 .note {
                     margin: 4px 0 0;
                     font-size: 0.9rem;
-                    color: #6b7280;
+                    color: #656260;
                 }
                 a {
-                    color: #0f766e;
+                    color: #2f2f31;
                     text-decoration: none;
                     font-weight: 600;
                 }

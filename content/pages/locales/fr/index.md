@@ -11,20 +11,20 @@ sections:
     text: >-
       Nous transformons vos idees en contenus actionnables pour reseaux sociaux, partenaires et clients.
     actions:
-      - label: GET STARTED
+      - label: Get started
         altText: Open questionnaire
         url: /formulaire
         showIcon: false
         icon: arrowRight
         iconPosition: right
-        style: primary
+        style: secondary
         type: Button
-      - label: Social
+      - label: See Tutorials
         url: /social
         showIcon: true
         icon: arrowRight
         iconPosition: right
-        style: secondary
+        style: primary
         type: Link
     media:
       url: /images/main-hero.svg
@@ -40,6 +40,10 @@ sections:
           - pl-16
           - pb-16
           - pr-16
+    badge:
+      label: THIS IS A BADGE
+      color: text-primary
+      type: Badge
   - type: FeaturedItemsSection
     title:
       text: Services
@@ -99,12 +103,12 @@ sections:
             flexDirection: row
             justifyContent: center
     actions:
-      - label: GET STARTED
+      - label: Get started
         url: /formulaire
         showIcon: false
         icon: arrowRight
         iconPosition: right
-        style: primary
+        style: secondary
         type: Button
     variant: three-col-grid
     colors: bg-neutral-fg-dark
@@ -118,6 +122,37 @@ sections:
         justifyContent: center
       subtitle:
         textAlign: center
+  - subtitle: Award winning enterprises trust us
+    images:
+      - url: /images/empathy-logo.svg
+        altText: Empathy logo
+        type: ImageBlock
+      - url: /images/wellster-logo.svg
+        altText: Wellster logo
+        type: ImageBlock
+      - url: /images/vise-logo.svg
+        altText: Vise logo
+        type: ImageBlock
+      - url: /images/telus-logo.svg
+        altText: Telus logo
+        type: ImageBlock
+      - url: /images/contenful-logo.svg
+        altText: Contentful logo
+        type: ImageBlock
+      - url: /images/sanity-logo.svg
+        altText: Sanity logo
+        type: ImageBlock
+      - url: /images/rangle-logo.svg
+        altText: Rangle logo
+        type: ImageBlock
+    motion: move-to-left
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        justifyContent: center
+      subtitle:
+        textAlign: center
+    type: ImageGallerySection
   - type: GenericSection
     title:
       text: A propos
